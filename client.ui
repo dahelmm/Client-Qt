@@ -28,44 +28,48 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QLabel" name="l_name">
-          <property name="text">
-           <string>Имя:</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="l_name">
+            <property name="text">
+             <string>Имя:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lE_name"/>
+          </item>
+         </layout>
         </item>
         <item>
-         <widget class="QLineEdit" name="lE_name"/>
+         <widget class="QPushButton" name="pB_connectToServer">
+          <property name="text">
+           <string>Подключиться</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
       <item>
-       <widget class="QPushButton" name="pB_connectToServer">
-        <property name="text">
-         <string>Подключиться</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
-     <widget class="QTextEdit" name="tE_info"/>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLineEdit" name="lE_sendData"/>
+       <widget class="QTextEdit" name="tE_info"/>
       </item>
       <item>
-       <widget class="QPushButton" name="pB_sendData">
-        <property name="text">
-         <string>Отправить</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="lE_sendData"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pB_sendData">
+          <property name="text">
+           <string>Отправить</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>

@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Client; }
@@ -16,23 +19,24 @@ class Client : public QMainWindow
 public:
     Client(QWidget *parent = nullptr);
     ~Client();
+    void download(const QUrl&url);
 
 private slots:
     //обработка сигналов сокета
     void socketConnected();
     void socketDisconnected();
-
     void socketReadyRead();
-
     void on_pB_connectToServer_clicked();
-
     void on_pB_sendData_clicked();
+
+
+
+
 
 private:
     Ui::Client *ui;
     QTcpSocket *socket; //сокет
     bool connectToHost; //признак подключения
-
     void printMessage(QString message);
 };
 #endif // CLIENT_H

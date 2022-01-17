@@ -6,6 +6,11 @@ Client::Client(QWidget *parent)
     , ui(new Ui::Client)
 {
     ui->setupUi(this);
+
+
+
+
+
 }
 
 Client::~Client()
@@ -13,12 +18,13 @@ Client::~Client()
     delete ui;
 }
 
+
 void Client::socketConnected()
 {
     qDebug()<<"Подключено к серверу.";
     printMessage("Подключено к серверу");
     QString name = ui->lE_name->text();
-    socket->write(name.toUtf8()+"подключился к чату");
+    socket->write(name.toUtf8()+" подключился к чату");
     ui->pB_connectToServer->setText("Отключиться");
     connectToHost=true;
 }
