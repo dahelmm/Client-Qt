@@ -46,7 +46,7 @@ void Client::on_pB_connectToServer_clicked()
         connect(socket,SIGNAL(disconnected()),this,SLOT(socketDisconnected()));
         connect(socket,SIGNAL(readyRead()),this,SLOT(socketReadyRead()));
 
-        socket->connectToHost("LocalHost",8001);
+        socket->connectToHost("127.0.0.1",8001);
     }
     else
     {
